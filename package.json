@@ -4,7 +4,9 @@
   "description": "server",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"SET NODE_ENV=development=production node server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"nodemon server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/Tduncan14/devCamper/issues"
   },
-  "homepage": "https://github.com/Tduncan14/devCamper#readme"
+  "homepage": "https://github.com/Tduncan14/devCamper#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
 }
