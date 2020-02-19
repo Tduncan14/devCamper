@@ -16,7 +16,7 @@ exports.getBootcamps =(req,res,next) =>{
 // @route  Get/ api/v1/bootcamps/:id
 //access Public
 
-exports.getBootcamps = (req,res,ext) => {
+exports.getBootcamp = (req,res,ext) => {
     res.status(200).json({success:true,msg:`show the ${req.params.id}`})
 }
 
