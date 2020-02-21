@@ -1,37 +1,41 @@
 const express = require('express');
 const dotenv = require('dotenv');
+// const logger = require('./middleware/logger')
+const connectDB = require('./config/db');
 
+const morgan = require('morgan');
 //bring the files
 
-const bootcamps = require('./routes/bootcamps');
+
 
 
 // Load env vars
 
 dotenv.config({path: './config/config.env'});
 
+const bootcamps = require('./routes/bootcamps');
 
 
+// Connect to the database
+
+connectDB();
 
 const PORT = process.env.PORT ||5000
 
 const app = express();
 
+
+
 // Mount the routers 
 
 
-const logger = (req,res,next) =>{
+if(PORT === true){
+app.use(morgan('dev'))
 
-    console.log(`${req.method}` )
+}
 
 
-
-    next();
- }
-
-app.use(logger)
 app.use('/api/v1/bootcamps', bootcamps);
-
 
 
 app.listen(

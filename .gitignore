@@ -1,2 +1,6 @@
 node_modules/
 config/config.env
+
+
+
+mongodb+srv://Treek:<password>@cluster0-ivgmu.mongodb.net/test?retryWrites=true&w=majority
