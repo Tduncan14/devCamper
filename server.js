@@ -19,7 +19,19 @@ const app = express();
 
 // Mount the routers 
 
-app.use('/api/v1/bootcamps', bootcamps)
+
+const logger = (req,res,next) =>{
+
+    console.log(`${req.method}` )
+
+
+
+    next();
+ }
+
+app.use(logger)
+app.use('/api/v1/bootcamps', bootcamps);
+
 
 
 app.listen(

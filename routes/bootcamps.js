@@ -5,18 +5,18 @@ const {getBootcamps,getBootcamp,deleteBootcamp,createBootcamp,updateBootcamp} = 
 const router = express.Router()
 
 
+// middleware function take in these three things
+
+
+
+
 
 router.get('/',getBootcamps)
-
-router.get('/:id',getBootcamp)
-
-
 router.post('/',createBootcamp)
 
 
+router.get('/:id',getBootcamp)
 router.put('/:id',updateBootcamp)
-
-
 router.delete('/:id',deleteBootcamp)
 
 
